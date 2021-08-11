@@ -1,6 +1,6 @@
 {
   "name": "bio-chat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Chat component of bioiq projects",
   "main": "lib/index.js",
   "scripts": {

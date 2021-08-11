@@ -1,0 +1,46 @@
+@import "./scss/variables.scss";
+
+.chat-item {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+  color: $color-white;
+  font-size: 14px;
+  line-height: 16px;
+
+  &.my-item {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .profile-image {
+    width: 32px;
+    height: 32px;
+    margin-right: 4px;
+    flex-shrink: 0;
+  }
+
+  .message-wrapper {
+    border-radius: 12px;
+    opacity: 0.7;
+    padding: 8px 12px;
+    background-color: #000000;
+
+    &.help {
+      background-color: $color-secondary;
+    }
+
+    &.my-message {
+      background-color: $color-primary;
+      opacity: 1;
+    }
+
+    .username {
+      margin-bottom: 4px;
+    }
+  }
+
+  &:nth-child(4) {
+    padding-right: 56px;
+  }
+}

@@ -11,10 +11,17 @@ import MessageIcon from "./icons/MessageIcon";
 import QuestionIcon from "./icons/QuestionIcon";
 import CloseIcon from "./icons/CloseIcon";
 
-import { ChatProps } from "../index";
-
 import "react-virtualized/styles.css";
 import "./Chat.scss";
+
+export interface ChatProps {
+  server: string;
+  accessToken: string;
+  roomId: string;
+  currentUserId: string;
+  getUser: (id: string) => any;
+  sendMsg: (text: string) => void;
+}
 
 const Chat: FC<ChatProps> = ({
   server,

@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import classNames from "classnames";
-import { MessageProps } from "../index";
 import "./Message.scss";
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const AvatarImage = require("./images/avarta1.jpg");
+export interface MessageProps {
+  userId: string;
+  text: string;
+  isMe?: boolean;
+  getUser: (userId: string) => void;
+}
 
 const Message: React.FC<MessageProps> = ({ userId, text, isMe, getUser }) => {
   const [userInfo, setUserInfo] = useState<any>(null);
@@ -27,7 +30,7 @@ const Message: React.FC<MessageProps> = ({ userId, text, isMe, getUser }) => {
           className="profile-image"
           width="32"
           height="32"
-          src={userInfo?.user?.profile_image || AvatarImage}
+          src={userInfo?.user?.profile_image}
         />
       )}
 
